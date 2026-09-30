@@ -36,7 +36,7 @@ function copyJarFromLocalRepo () {
 # check location of local maven repo
 if  [ !  -d  "$MAVEN_LOCAL_REPO" ]; then
 	echo "Couldn't find the local maven repository at the default location '$MAVEN_LOCAL_REPO'. "
-	echo "Please set the script-variable 'MAVEN_LOCAL_REPO' to the path to your configured local maven repository."
+	echo "Please set the script-variable 'MAVEN_LOCAL_REPO' to the path pointing to your configured local maven repository."
 	exit -1
 fi
 

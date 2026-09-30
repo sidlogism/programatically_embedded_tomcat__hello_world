@@ -16,7 +16,7 @@ In order to launch the embedded tomcat web server (and to load the example servl
 	./copy_dependencies_in_local_temp_folder.sh
 	/usr/local/jdk-25/bin/java   -cp 'dependencies_cache/*:target/*'   sidlogism.experiments.TomcatLauncher
 
-This is an non-automated quick-n-dirty workaround. Creating an executable fat JAR via the maven-shade-plugin currently runs into problems with unsigned transitive dependencies for this example project.
+This is a non-automated quick-n-dirty workaround. Creating an executable fat JAR via the maven-shade-plugin currently runs into problems with unsigned transitive dependencies for this example project.
 
 ## Open example servlets in browser ##
 See the example servlets in any desired browser via:
