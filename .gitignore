@@ -1,0 +1,10 @@
+# ignored files
+*.jar
+*~
+# ignored dirs
+.git
+.idea
+dependencies_cache
+deps
+target
+temp
