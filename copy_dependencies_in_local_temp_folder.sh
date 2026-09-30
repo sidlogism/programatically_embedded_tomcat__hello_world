@@ -7,6 +7,8 @@ function copyJarFromLocalRepo () {
   # parameter semantics:
   # @param currentJarPrefix  file name prefix of the JAR of the currently handled dependency
   # @param currentRepoSubpath   sub path in local maven repo to the JAR of the currently handled dependency
+  # @param version   optional: required version of the currently handled dependency
+  #                  provided only in case that there might be ambiguities in deriving the newest dependency version from the repository subfolders
   local -r currentJarPrefix=$1
   local -r currentRepoSubpath=$2
   local -r version=$3
@@ -43,7 +45,7 @@ fi
 # start handling of dependencies (download via "mvn package" + copy to local temporary folder)
 echo "This script creates the local temporary folder '$LOCAL_TEMP_DIR' " \
   "and issues 'mvn clean' and 'mvn package' to download the required dependencies (from the Maven central repository) into the local maven repo. " \
-  "Afterwards it copies the required JARs of the hardcoded dependencies int the local temporary folder for usage via 'java -cp ...' ."
+  "Afterwards it copies the required JARs of the hardcoded dependencies into the local temporary folder for usage via 'java -cp ...' ."
 read -p "Do you wish to proceed? (y/n): "  user_choice
 if [[ $user_choice != 'y' ]]; then
   echo "Aborting script."
