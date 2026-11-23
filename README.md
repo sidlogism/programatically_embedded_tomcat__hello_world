@@ -40,4 +40,5 @@ See the example servlets in any desired browser via:
 The setup was not tested on Windows yet.
 
 For running a bash-script on Windows, use for example [Git for Windows](https://git-scm.com/install/windows).
- :warning: The script `copy_dependencies_in_local_temp_folder.sh` requires the Maven local repository in the default location: `~/.m2/repository/`.
+
+:warning: : The script `copy_dependencies_in_local_temp_folder.sh` requires the Maven local repository in the default location: `~/.m2/repository/`.
